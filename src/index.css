@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design Car — design system
+  Palette derived from the real brand assets (logo2.png / banner-tienda.png):
+  brand red #D30B06, anthracite #191513, warm off-white #F8F7F5.
+  Light theme only: the brand equity is "warm white + anthracite", and the
+  brand red on dark surfaces drifts into the aggressive motorsport look the
+  brief explicitly rules out.
+*/
+
+@layer base {
+  :root {
+    /* Surfaces & text */
+    --background: 40 18% 97%;
+    --foreground: 20 14% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 9%;
+
+    --surface-sunken: 36 16% 96%;
+    --surface-inverse: 20 14% 9%;
+    --surface-inverse-foreground: 40 25% 98%;
+
+    --muted: 36 16% 96%;
+    --muted-hover: 32 12% 91%;
+    --muted-foreground: 25 8% 42%;
+
+    --border: 32 12% 91%;
+    --border-strong: 28 8% 66%;
+    --input: 28 9% 55%;
+    --ring: 1 92% 42%;
+
+    /* Primary — brand red (#D30B06) */
+    --primary: 1 92% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 1 92% 34%;
+    --primary-active: 1 90% 27%;
+    --primary-subtle: 1 100% 97%;
+    --primary-subtle-foreground: 1 80% 32%;
+
+    /* Secondary — anthracite */
+    --secondary: 20 14% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 20 12% 16%;
+
+    /* Accent — the bright red sweep of the logo (decorative only) */
+    --accent: 0 95% 49%;
+    --accent-hover: 0 90% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    /* WhatsApp — same hue family as the official green, darkened for AA white text */
+    --whatsapp: 142 68% 30%;
+    --whatsapp-foreground: 0 0% 100%;
+    --whatsapp-hover: 142 70% 24%;
+    --whatsapp-soft: 142 55% 95%;
+    --whatsapp-soft-foreground: 142 70% 24%;
+    --whatsapp-border: 142 60% 82%;
+
+    /* Signals */
+    --destructive: 0 66% 38%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-subtle: 0 80% 97%;
+    --success-subtle: 142 55% 95%;
+    --success-subtle-foreground: 142 70% 24%;
+    --warning-subtle: 38 92% 95%;
+    --warning-subtle-foreground: 30 70% 28%;
+
+    /* Gradients */
+    --gradient-page: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(36 16% 96%) 100%);
+    --gradient-sweep: linear-gradient(100deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-placeholder: linear-gradient(135deg, hsl(36 16% 96%) 0%, hsl(32 12% 91%) 100%);
+    --gradient-inverse: linear-gradient(180deg, hsl(20 14% 11%) 0%, hsl(20 14% 8%) 100%);
+
+    /* Shadows — warm-tinted anthracite, never pure black */
+    --shadow-xs: 0 1px 2px 0 hsl(20 14% 9% / 0.04);
+    --shadow-sm: 0 1px 2px 0 hsl(20 14% 9% / 0.05), 0 1px 1px -1px hsl(20 14% 9% / 0.04);
+    --shadow-md: 0 2px 4px -1px hsl(20 14% 9% / 0.06), 0 4px 12px -2px hsl(20 14% 9% / 0.06);
+    --shadow-lg: 0 8px 24px -4px hsl(20 14% 9% / 0.08), 0 2px 6px -2px hsl(20 14% 9% / 0.05);
+    --shadow-fab: 0 6px 16px -2px hsl(142 70% 14% / 0.28), 0 2px 6px -2px hsl(142 70% 14% / 0.2);
+
+    /* Radius scale */
+    --radius: 0.625rem;
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.2, 0, 0, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-body-s text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-foreground;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  [id] {
+    scroll-margin-top: 96px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-10;
+  }
+
+  .section-y {
+    @apply py-14 md:py-20 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply flex items-center gap-2 text-eyebrow font-semibold uppercase tracking-[0.08em] text-muted-foreground;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-0.5 w-4 rounded-full bg-primary;
+  }
+
+  .surface-inverse {
+    background-image: var(--gradient-inverse);
+    @apply text-surface-inverse-foreground;
+  }
+}
+
+@layer utilities {
+  .image-placeholder {
+    background-image: var(--gradient-placeholder);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 480ms var(--ease-out, cubic-bezier(0.2, 0, 0, 1)),
+      transform 480ms var(--ease-out, cubic-bezier(0.2, 0, 0, 1));
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
