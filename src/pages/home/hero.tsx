@@ -109,33 +109,43 @@ export const VehicleSelectorSection = () => {
             const selected = vehicleSlug === item.slug;
             return (
               <li key={item.slug}>
-                <div
-                  className={
-                    selected
-                      ? "flex h-full flex-col gap-1 rounded-lg border-2 border-primary bg-card p-md shadow-md"
-                      : "flex h-full flex-col gap-1 rounded-lg border border-border bg-card p-md transition-[border-color,box-shadow] duration-base hover:border-border-strong hover:shadow-sm"
-                  }
-                >
-                  <button
-                    type="button"
-                    aria-pressed={selected}
-                    onClick={() => setVehicle(selected ? null : item.slug)}
-                    className="flex flex-col gap-1 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  <article
+                    className={
+                      selected
+                        ? "group relative flex h-full min-h-64 flex-col overflow-hidden rounded-lg border-2 border-primary bg-card shadow-md"
+                        : "group relative flex h-full min-h-64 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-[border-color,box-shadow,transform] duration-base hover:-translate-y-0.5 hover:border-border-strong hover:shadow-md"
+                    }
                   >
-                    <span className="font-display text-body-l font-semibold text-foreground">
-                      {item.name}
-                    </span>
-                    <span className="text-[0.8125rem] text-muted-foreground">{item.years}</span>
-                    <span className="text-[0.8125rem] text-muted-foreground">{item.tagline}</span>
-                  </button>
-                  <Link
-                    to={`/vehiculos/${item.slug}`}
-                    className="mt-2 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-primary underline-offset-4 hover:underline"
-                  >
-                    Ver accesorios
-                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                  </Link>
-                </div>
+                    <button
+                      type="button"
+                      aria-pressed={selected}
+                      onClick={() => setVehicle(selected ? null : item.slug)}
+                      className="relative flex min-h-64 flex-1 flex-col justify-end text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+                    >
+                      <MediaFrame
+                        media={item.media}
+                        ratio="aspect-[4/3]"
+                        className="absolute inset-0 h-full rounded-none"
+                        showTag={false}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        imageClassName="object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:group-hover:scale-100"
+                      />
+                      <span className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/5" aria-hidden="true" />
+                      <span className="relative z-10 flex flex-col gap-1 p-lg text-white">
+                        <span className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-white/75">{item.years}</span>
+                        <span className="font-display text-body-l font-semibold">{item.name}</span>
+                        <span className="line-clamp-2 text-[0.8125rem] text-white/80">{item.tagline}</span>
+                      </span>
+                      {selected ? <span className="absolute right-md top-md z-10 rounded-full bg-primary px-sm py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.06em] text-primary-foreground">Seleccionada</span> : null}
+                    </button>
+                    <Link
+                      to={`/vehiculos/${item.slug}`}
+                      className="relative z-10 inline-flex items-center gap-1.5 border-t border-white/10 bg-black/45 px-lg py-sm text-[0.8125rem] font-semibold text-white underline-offset-4 hover:bg-black/60 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      Ver accesorios
+                      <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </Link>
+                  </article>
               </li>
             );
           })}

@@ -9,7 +9,7 @@ export const galleryItems: GalleryItem[] = [
     id: "trabajo-1",
     caption: "Amarok con barra antivuelco y lona marítima",
     media: {
-      src: null,
+      src: "/assets/designcar/barra-amarok.jpg",
       alt: "Amarok equipada con barra antivuelco y lona marítima",
       placeholderLabel: "Foto de trabajo: Amarok equipada",
       ratio: "aspect-[4/3]",
@@ -19,7 +19,7 @@ export const galleryItems: GalleryItem[] = [
     id: "trabajo-2",
     caption: "Hilux con portaequipajes y valijón",
     media: {
-      src: null,
+      src: "/assets/designcar/hilux-barra-antivuelco4.jpg",
       alt: "Toyota Hilux equipada con portaequipajes y valijón",
       placeholderLabel: "Foto de trabajo: Hilux con valijón",
       ratio: "aspect-[4/3]",
@@ -27,9 +27,9 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "trabajo-3",
-    caption: "Instalación de estribos en el taller de Warnes",
+    caption: "Ranger con barra antivuelco instalada",
     media: {
-      src: null,
+      src: "/assets/designcar/barra-ranger.jpg",
       alt: "Instalación de estribos en el taller de Design Car Warnes",
       placeholderLabel: "Foto de taller: instalación de estribos",
       ratio: "aspect-[4/3]",
@@ -37,9 +37,9 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "trabajo-4",
-    caption: "Ranger con cobertor rígido",
+    caption: "Lona marítima instalada sobre caja de pickup",
     media: {
-      src: null,
+      src: "/assets/designcar/novedad-lonas.jpg",
       alt: "Ford Ranger con cobertor rígido colocado",
       placeholderLabel: "Foto de trabajo: Ranger con cobertor",
       ratio: "aspect-[4/3]",
@@ -47,9 +47,9 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "trabajo-5",
-    caption: "Torre de estribos y cobertores en showroom",
+    caption: "Portaequipaje instalado para ampliar la capacidad de carga",
     media: {
-      src: null,
+      src: "/assets/designcar/portaequipaje.jpg",
       alt: "Muestra de estribos y cobertores en el showroom de Design Car",
       placeholderLabel: "Foto de showroom: productos exhibidos",
       ratio: "aspect-[4/3]",
@@ -57,9 +57,9 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "trabajo-6",
-    caption: "S10 lista para entregar con equipamiento completo",
+    caption: "S10 con barra antivuelco instalada",
     media: {
-      src: null,
+      src: "/assets/designcar/barra-s10.jpg",
       alt: "Chevrolet S10 equipada lista para entregar",
       placeholderLabel: "Foto de entrega: S10 equipada",
       ratio: "aspect-[4/3]",
