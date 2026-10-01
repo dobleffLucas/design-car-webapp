@@ -19,7 +19,7 @@ export const branches: Branch[] = [
     mapsQuery: "Darwin 22, Buenos Aires, CABA, Argentina",
     note: "Local con showroom y taller de instalación. Estacionamiento sobre Darwin.",
     media: {
-      src: "/assets/designcar/banners_logos/banner_empresa1.jpg",
+      src: "/assets/designcar/banners_logos/banner_empresa_fisica.jpg",
       alt: "Frente de un local de Design Car en Warnes",
       placeholderLabel: "Foto: frente del local Darwin 22 — 4:3 · 1200×900",
       ratio: "aspect-[4/3]",
