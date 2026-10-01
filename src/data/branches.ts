@@ -19,8 +19,8 @@ export const branches: Branch[] = [
     mapsQuery: "Darwin 22, Buenos Aires, CABA, Argentina",
     note: "Local con showroom y taller de instalación. Estacionamiento sobre Darwin.",
     media: {
-      src: null,
-      alt: "Frente del local de Design Car en Darwin 22, Warnes",
+      src: "/assets/designcar/banners_logos/nosotros.jpg",
+      alt: "Frente de un local de Design Car en Warnes",
       placeholderLabel: "Foto: frente del local Darwin 22 — 4:3 · 1200×900",
       ratio: "aspect-[4/3]",
     },
@@ -39,8 +39,8 @@ export const branches: Branch[] = [
     mapsQuery: "Andrés Rolón 120, San Isidro, Buenos Aires, Argentina",
     note: "Ideal para la zona norte. Coordinamos el turno de instalación por WhatsApp.",
     media: {
-      src: null,
-      alt: "Frente del local de Design Car en Andrés Rolón 120, San Isidro",
+      src: "/assets/designcar/banners_logos/nosotros2.jpg",
+      alt: "Frente de un local de Design Car en San Isidro",
       placeholderLabel: "Foto: frente del local Andrés Rolón 120 — 4:3 · 1200×900",
       ratio: "aspect-[4/3]",
     },
