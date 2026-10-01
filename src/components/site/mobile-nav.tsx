@@ -41,12 +41,12 @@ export const MobileNavTrigger = () => {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="z-[60] w-full overflow-y-auto p-0 sm:max-w-sm">
-        <SheetHeader className="border-b border-border p-lg text-left">
+        <SheetHeader className="border-b border-primary-hover bg-primary p-lg text-left">
           <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
           <SheetDescription className="sr-only">
             Accesos a productos, vehículos, instalación, sucursales y contacto.
           </SheetDescription>
-          <Logo className="h-7" />
+          <Logo tone="inverse" className="h-8" />
         </SheetHeader>
 
         <nav aria-label="Navegación mobile" className="flex flex-col gap-xl p-lg">

@@ -32,7 +32,7 @@ const Home = () => {
           <SectionHeading
             eyebrow="Categorías"
             title="Todo lo que necesitás para equipar tu camioneta"
-            description="Barras antivuelco, estribos, lonas, portaequipajes, deflectores y equipamiento de camping. Todo con asesoramiento y opción de instalación."
+            description="Barras, lonas, estribos y equipamiento para usar más tu camioneta."
             id="categorias-home-title"
             action={
               <Button asChild variant="outline">

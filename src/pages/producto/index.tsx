@@ -1,4 +1,4 @@
-import { ArrowRight, CircleCheckBig, PackageCheck, Wrench } from "lucide-react";
+import { ArrowRight, CircleCheckBig, ExternalLink, PackageCheck, Wrench } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 
 import { categoryBySlug } from "@/data/categories";
@@ -107,12 +107,26 @@ const ProductPage = () => {
               No publicamos precios porque cambian por modelo y versión. Escribinos y te pasamos el
               valor con la opción de instalación incluida.
             </p>
-            <div className="flex flex-col gap-sm pt-sm sm:flex-row">
+            <div className="flex flex-col gap-sm pt-sm sm:flex-row sm:flex-wrap">
               <WhatsAppButton message={message} label="Consultar por WhatsApp" size="lg" className="sm:flex-1" />
               <Button asChild variant="outline" size="lg">
                 <Link to={consultHref}>Enviar consulta</Link>
               </Button>
             </div>
+            {product.mercadoLibreUrl ? (
+              <div className="flex flex-col gap-1 pt-sm">
+                <a
+                  href={product.mercadoLibreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-label text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                >
+                  Comprar en Mercado Libre
+                  <ExternalLink aria-hidden="true" />
+                </a>
+                <p className="text-[0.8125rem] text-muted-foreground">También disponible para compra online.</p>
+              </div>
+            ) : null}
             {vehicle ? (
               <p className="text-[0.8125rem] text-muted-foreground">
                 Vamos a consultar por tu {vehicle.name}.

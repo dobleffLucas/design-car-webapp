@@ -11,8 +11,8 @@ export const TrustSection = () => (
         <SectionHeading
           tone="inverse"
           eyebrow="Por qué Design Car"
-          title="Equipamos camionetas desde hace más de dos décadas"
-          description="No somos una tienda que despacha cajas: asesoramos, confirmamos compatibilidad e instalamos nosotros mismos en nuestras dos sucursales."
+          title="La compra correcta empieza por la compatibilidad"
+          description="Experiencia, asesoramiento e instalación para que el accesorio funcione en tu camioneta."
           id="confianza-title"
         />
       </Reveal>

@@ -35,8 +35,8 @@ export const SiteHeader = () => {
       className={cn(
         "sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-200 ease-out",
         scrolled
-          ? "border-border bg-background/90 shadow-sm backdrop-blur-md"
-          : "border-transparent bg-background",
+          ? "border-primary-hover bg-primary shadow-lg"
+          : "border-primary-hover bg-primary",
       )}
     >
       <div className="container-page flex h-16 items-center gap-lg lg:h-[72px]">
@@ -45,7 +45,7 @@ export const SiteHeader = () => {
           className="flex shrink-0 items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           aria-label={`${site.name} — ir al inicio`}
         >
-          <Logo className="h-7 lg:h-8" />
+          <Logo tone="inverse" className="h-8 lg:h-9" />
         </Link>
 
         <nav aria-label="Navegación principal" className="hidden lg:block">
@@ -97,7 +97,7 @@ export const SiteHeader = () => {
                   aria-current={isActive(item.to) ? "page" : undefined}
                   className={cn(
                     "inline-flex h-10 items-center rounded-md px-3 text-label transition-colors duration-150 hover:bg-muted",
-                    isActive(item.to) ? "text-primary" : "text-foreground",
+                    isActive(item.to) ? "bg-primary-active text-primary-foreground" : "text-primary-foreground",
                   )}
                 >
                   {item.label}
@@ -141,7 +141,7 @@ const NavDropdown = ({
     <DropdownMenuTrigger
       className={cn(
         "inline-flex h-10 items-center gap-1.5 whitespace-nowrap rounded-md px-3 text-label transition-colors duration-150 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-        active ? "text-primary" : "text-foreground",
+        active ? "bg-primary-active text-primary-foreground" : "text-primary-foreground",
       )}
     >
       {label}

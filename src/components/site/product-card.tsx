@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
@@ -85,6 +85,17 @@ export const ProductCard = ({
           size="sm"
           className="flex-1"
         />
+        {product.mercadoLibreUrl ? (
+          <a
+            href={product.mercadoLibreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Ver publicación de ${product.name} en Mercado Libre (se abre en una pestaña nueva)`}
+            className="inline-flex min-h-9 items-center gap-1 rounded-md px-2 text-[0.6875rem] font-semibold text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          >
+            ML <ExternalLink aria-hidden="true" />
+          </a>
+        ) : null}
         <Button asChild variant="outline" size="iconSm">
           <Link to={href} aria-label={`Ver ficha de ${product.name}`}>
             <ArrowRight className="h-4 w-4" />

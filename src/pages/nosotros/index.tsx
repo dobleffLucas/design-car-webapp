@@ -36,8 +36,8 @@ const NosotrosPage = () => {
       <PageHero
         breadcrumbs={<PageBreadcrumbs items={[{ label: "Inicio", to: "/" }, { label: "Nosotros" }]} />}
         eyebrow="Nosotros"
-        title="Somos una empresa de equipamiento, no una tienda de accesorios"
-        description="Design Car nació equipando camionetas de trabajo en Buenos Aires y hoy sigue haciendo lo mismo, con dos locales y un taller propio."
+        title="Más de dos décadas equipando camionetas"
+        description="Design Car acompaña a quienes usan pickups y 4x4 para trabajar, viajar y disfrutar. Te ayudamos a elegir, confirmar compatibilidad e instalar."
         actions={
           <WhatsAppButton
             message={whatsappMessages.vehicle(vehicle?.name)}
@@ -58,13 +58,10 @@ const NosotrosPage = () => {
         <div className="grid gap-xl lg:grid-cols-[1fr_0.85fr]">
           <div className="flex flex-col gap-md">
             <h2 id="historia-title" className="text-display-s">
-              Nuestra historia
+              Una historia hecha alrededor de las pickups
             </h2>
             <p className="max-w-prose text-body-l text-muted-foreground">
-              Empezamos en Warnes, en el mismo barrio donde hoy está nuestra sucursal de Darwin 22,
-              atendiendo a gente que necesitaba equipar su camioneta para trabajar. Con los años
-              sumamos taller propio, abrimos el local de San Isidro y ampliamos el catálogo hasta
-              cubrir desde una barra antivuelco hasta una conservadora para el fin de semana.
+              Design Car creció junto a una comunidad que necesita que su camioneta esté lista para el trabajo, la ruta y el tiempo libre. El catálogo fue ampliándose a medida que aparecían nuevas necesidades: protección, carga, confort y camping.
             </p>
             <p className="max-w-prose text-body-l text-muted-foreground">
               Lo que no cambió es la forma de trabajar: preguntamos para qué se usa la camioneta
@@ -72,7 +69,7 @@ const NosotrosPage = () => {
               no le sirve.
             </p>
             <p className="text-[0.75rem] uppercase tracking-[0.06em] text-muted-foreground">
-              Historia a completar y validar con el cliente
+              Esta historia queda preparada para sumar fotos reales del local, showroom, taller y equipo.
             </p>
 
             <dl className="mt-md grid gap-md sm:grid-cols-2">
@@ -122,7 +119,7 @@ const NosotrosPage = () => {
               tone="inverse"
               eyebrow="Cómo trabajamos"
               title="Expertos en pickups, cerca del cliente"
-              description="Cinco cosas que sostienen la relación con nuestros clientes, todas ellas desde hace años."
+              description="La experiencia se nota en cómo te ayudamos a decidir y en cómo dejamos instalada cada solución."
               id="ejes-title"
             />
           </Reveal>
@@ -177,7 +174,7 @@ const NosotrosPage = () => {
           <Reveal>
             <SectionHeading
               eyebrow="Sucursales"
-              title="Dos locales físicos donde encontrarnos"
+              title="Conocé nuestros locales y taller"
               description="Podés venir a ver los productos antes de decidir, o coordinar la instalación con turno previo."
               id="locales-title"
               action={

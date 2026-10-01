@@ -27,15 +27,15 @@ export const Hero = () => {
       />
       <div className="container-page relative grid items-center gap-xl py-xl lg:grid-cols-[1.05fr_0.95fr] lg:py-section">
         <div className="flex flex-col gap-lg">
-          <p className="eyebrow">Equipamiento para pickups y 4x4 desde 2004</p>
+          <p className="eyebrow">EQUIPAMIENTO PARA PICKUPS Y 4X4</p>
 
           <h1 className="max-w-[20ch] text-display-l">
             Equipá tu camioneta para lo que viene
           </h1>
 
           <p className="max-w-prose text-body-l text-muted-foreground">
-            Accesorios, asesoramiento e instalación para pickups y 4x4. Te confirmamos la
-            compatibilidad con tu modelo antes de que compres cualquier cosa.
+            Accesorios, asesoramiento e instalación para pickups y 4x4. Te confirmamos compatibilidad
+            antes de comprar.
           </p>
 
           <div className="flex flex-col gap-sm sm:flex-row sm:flex-wrap">
@@ -95,13 +95,12 @@ export const VehicleSelectorSection = () => {
     <section aria-labelledby="selector-title" className="border-b border-border bg-surface-sunken">
       <div className="container-page flex flex-col gap-lg py-xl">
         <div className="flex flex-col gap-sm">
-          <p className="eyebrow">Paso 1</p>
+          <p className="eyebrow">Elegí para empezar</p>
           <h2 id="selector-title" className="text-headline-l">
             ¿Qué camioneta tenés?
           </h2>
           <p className="max-w-prose text-body-s text-muted-foreground">
-            Elegí tu modelo y el sitio se acomoda: te mostramos solo lo que le queda bien y
-            completamos las consultas de WhatsApp con tu camioneta.
+            Te mostramos accesorios compatibles y enriquecemos tu consulta de WhatsApp con el modelo elegido.
           </p>
         </div>
 

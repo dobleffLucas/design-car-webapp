@@ -68,6 +68,8 @@ export interface Product {
   };
   /** Gallery: the first entry is the main image. */
   media: MediaRef[];
+  /** Optional real Mercado Libre listing; never invent or infer this URL. */
+  mercadoLibreUrl?: string;
   featured?: boolean;
 }
 
