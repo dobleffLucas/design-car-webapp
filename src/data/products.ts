@@ -273,8 +273,8 @@ export const products: Product[] = [
       includes: ["Calce sobre la caja", "Regulación de cierre y bisagras", "Prueba de estanqueidad"],
     },
     media: [
-      slot("Foto: cobertor rígido montado — 4:3 · 1200×900", "Cobertor rígido de plástico montado sobre la caja de una camioneta"),
-      slot("Foto: apertura y herrajes — 4:3 · 1200×900", "Detalle de los herrajes y la apertura del cobertor"),
+      photo("/assets/designcar/lonas_cobertores/amarok-cobertor-e6931d4a94bd.jpg", "Cobertor rígido de plástico montado sobre la caja de una camioneta"),
+      photo("/assets/designcar/lonas_cobertores/cobertor-amarok-de4667f59314.jpg", "Detalle de los herrajes y la apertura del cobertor"),
     ],
     featured: true,
   },
@@ -394,8 +394,8 @@ export const products: Product[] = [
       includes: ["Montaje sobre anclajes originales", "Silicona selladora en los apoyos", "Control de torque"],
     },
     media: [
-      slot("Foto: estribo tubular montado — 4:3 · 1200×900", "Estribo tubular negro montado en una camioneta"),
-      slot("Foto: detalle de la superficie antideslizante — 4:3 · 1200×900", "Detalle de la superficie antideslizante del estribo"),
+      photo("/assets/designcar/estribos/estribos-camioneta-fba4ad7647d3.jpg", "Estribo tubular negro montado en una camioneta"),
+      photo("/assets/designcar/estribos/estribo-hilux-negro-066186f86e3b.jpg", "Detalle de la superficie antideslizante del estribo"),
     ],
     featured: true,
   },

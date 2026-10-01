@@ -9,18 +9,18 @@ export const galleryItems: GalleryItem[] = [
     id: "trabajo-1",
     caption: "Amarok con barra antivuelco y lona marítima",
     media: {
-      src: "/assets/designcar/barra-amarok.jpg",
-      alt: "Amarok equipada con barra antivuelco y lona marítima",
+      src: "/assets/designcar/banners_logos/banner_empresa_fisica.jpg",
+      alt: "Frente del local físico de Design Car",
       placeholderLabel: "Foto de trabajo: Amarok equipada",
       ratio: "aspect-[4/3]",
     },
   },
   {
     id: "trabajo-2",
-    caption: "Hilux con portaequipajes y valijón",
+    caption: "Frente del local Design Car",
     media: {
-      src: "/assets/designcar/hilux-barra-antivuelco4.jpg",
-      alt: "Toyota Hilux equipada con portaequipajes y valijón",
+      src: "/assets/designcar/banners_logos/banner_empresa2.jpg",
+      alt: "Frente del local de Design Car",
       placeholderLabel: "Foto de trabajo: Hilux con valijón",
       ratio: "aspect-[4/3]",
     },

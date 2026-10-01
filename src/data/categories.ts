@@ -28,7 +28,7 @@ export const categories: Category[] = [
       "Un estribo bien elegido cambia el uso diario: subís y bajás sin esfuerzo y el zócalo queda protegido de piedras y roces. Tenemos tubulares, de aluminio y eléctricos retráctiles.",
     icon: "stairs",
     media: {
-      src: null,
+      src: "/assets/designcar/estribos/estribos-camioneta-fba4ad7647d3.jpg",
       alt: "Camioneta con estribos tubulares instalados",
       placeholderLabel: "Foto: estribos montados en pickup — 16:10 · 1600×1000",
       ratio: "aspect-[16/10]",
@@ -70,7 +70,7 @@ export const categories: Category[] = [
       "Los deflectores reducen el ruido del viento, evitan que entre agua con la ventanilla entreabierta y protegen el capot de piedras. Se colocan sin perforar en la mayoría de los modelos.",
     icon: "wind",
     media: {
-      src: null,
+      src: "/assets/designcar/deflectores/amarok-deflector-99a7c1e4edad.jpg",
       alt: "Deflectores de capot y ventanillas colocados en una camioneta",
       placeholderLabel: "Foto: deflector de capot instalado — 16:10 · 1600×1000",
       ratio: "aspect-[16/10]",
@@ -84,7 +84,7 @@ export const categories: Category[] = [
       "La camioneta también es para el fin de semana. Sumamos equipamiento de camping y organización de caja probado en viajes reales: reposeras, conservadoras, cadenas para nieve y kits de amarre.",
     icon: "tent",
     media: {
-      src: null,
+      src: "/assets/designcar/camping/camping-e0cdc19dbf28.jpg",
       alt: "Equipamiento de camping y organización de caja de camioneta",
       placeholderLabel: "Foto: equipamiento de camping en la caja — 16:10 · 1600×1000",
       ratio: "aspect-[16/10]",

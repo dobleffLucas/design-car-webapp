@@ -1,6 +1,17 @@
 import { vehicleBrands } from "@/data/site";
 
-import { BrandLogoPlaceholder } from "./logo";
+import { BrandLogo } from "./logo";
+
+const brandLogoPaths: Record<string, string> = {
+  Volkswagen: "/assets/designcar/logos_marcas/logo_volkswagen.png",
+  Toyota: "/assets/designcar/logos_marcas/logo_toyota.png",
+  Ford: "/assets/designcar/logos_marcas/logo_ford.jpg",
+  Chevrolet: "/assets/designcar/logos_marcas/logo_chevrolet.jpg",
+  Fiat: "/assets/designcar/logos_marcas/logo_fiat.jpg",
+  Nissan: "/assets/designcar/logos_marcas/logo_nissan.jpg",
+  Mitsubishi: "/assets/designcar/logos_marcas/logo_mitsubishi.png",
+  RAM: "/assets/designcar/logos_marcas/logo_ram.jpg",
+};
 
 /**
  * Brand strip. The real brand logos will be supplied later, so each tile states
@@ -14,7 +25,7 @@ export const BrandLogos = ({ className }: { className?: string }) => (
   >
     {vehicleBrands.map((brand) => (
       <li key={brand}>
-        <BrandLogoPlaceholder brand={brand} />
+        <BrandLogo brand={brand} src={brandLogoPaths[brand]} />
       </li>
     ))}
   </ul>

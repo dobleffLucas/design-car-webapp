@@ -27,15 +27,9 @@ export const Logo = ({
   />
 );
 
-/**
- * Placeholder for the brand logos that will be supplied later. No trademark is
- * ever approximated: this states plainly that the logo is still to come.
- */
-export const BrandLogoPlaceholder = ({ brand }: { brand: string }) => (
+/** Displays the supplied vehicle brand artwork without approximating trademarks. */
+export const BrandLogo = ({ brand, src }: { brand: string; src: string }) => (
   <div className="flex h-14 items-center justify-center rounded-md border border-border bg-card px-3">
-    <span className="text-center text-[0.6875rem] font-medium leading-tight text-muted-foreground">
-      <span className="block font-semibold uppercase tracking-[0.06em]">Logo de marca</span>
-      {brand}
-    </span>
+    <img src={asset(src)} alt={`Logo de ${brand}`} className="max-h-9 w-auto max-w-full object-contain" />
   </div>
 );
